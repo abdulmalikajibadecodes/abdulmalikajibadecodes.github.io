@@ -1,192 +1,459 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Abdulmalik's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulmalik Ajibade's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --accent: #3b82f6;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Abdulmalik's Portfolio<br />
-						</h1>
-						<p> A showcase of my projects and abilities</a>.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<!-- <a href="index.html" class="logo">Massively</a> -->
-					</header>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<!-- <li class="active"><a href="index.html">See Portfolio Projects</a></li> -->
-							<!-- <li><a href="index.html">-------------------------------- ></a></li>
-							<li><a href="generic.html">See Portfolio Projects</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>  -->
-						</ul>
-						<ul class="icons">					
-							<li><a href="https://www.linkedin.com/in/abdulmalikajibade/" class="icon brands fa-linkedin" style="font-size: 3.0em;"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/abdulmalikajibadecodes" class="icon brands fa-github" style="font-size: 3.0em;"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        header.scrolled {
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">									
-									<h2><a href="#">Hi, I'm Abdulmalik Ajibade <br />								
-									</a></h2>
-									<p> Welcome to my portfolio where data meets innovation!</p>
-									<a class="image main"><img src="images/headshot.jpg" alt=""  /></a>
-								
-								<!-- </header> -->
-								<!-- <p>I am deeply passionate about harnessing the power of data to address global challenges. Through my projects and endeavors, I strive to make a positive impact by leveraging cutting-edge technologies and analytical techniques.</p>
-								<p>Explore my journey in data science, analytics, and engineering, and discover how I contribute to solving real-world problems. From energy data analysis to predictive modeling, each project showcases my dedication to driving innovation in diverse domains.</p>
-								<p>Join me on this exciting journey as we navigate through the realms of data-driven solutions and uncover the possibilities that lie at the intersection of technology and problem-solving.</p> -->
-														
-								<a href="https://automated-rate-forecaster-for-oil-wells.streamlit.app/" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<p>A web app that leverages LSTM models to automate oil production level forecasting. This innovative tool tailors forecasts and optimization 
-									recommendations to your specific operating conditions, creating a customizable model that continuously learns and adapts to your data, 
-									enabling real-time updates for enhanced decision-making in oil production.</p>
-								<ul class="actions special">
-									<li><a href="https://automated-rate-forecaster-for-oil-wells.streamlit.app/" class="button large">Check it out</a></li>
-								</ul>
-							</article>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>										
-										<h2><a href="https://colab.research.google.com/drive/1Dbzu3M04lPfhkekvwjSPFlmllKiTEb_F#scrollTo=13d4d15b">Equipment Failure Type Classification for Predictive Maintenance<br />										   
-									</header>
-									<a href="https://colab.research.google.com/drive/1Dbzu3M04lPfhkekvwjSPFlmllKiTEb_F#scrollTo=13d4d15b" class="image fit"><img src="images/failure type.png" alt="" /></a>
-									<p>Employing a cost-sensitive machine learning approach, I developed a classifier to preemptively identify failure types, ensuring proactive intervention and minimizing downtime.</p>
-									<ul class="actions special">
-										<li><a href="https://colab.research.google.com/drive/1Dbzu3M04lPfhkekvwjSPFlmllKiTEb_F#scrollTo=13d4d15b" class="button">See Code</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>										
-										<h2><a href="https://github.com/abdulmalikajibadecodes/Energy-Data-Analysis/blob/main/">SPAIN'S ENERGY MIX ANALYSIS<br />										   
-									</header>
-									<a href="https://github.com/abdulmalikajibadecodes/Energy-Data-Analysis/blob/main/SPAIN%20ENERGY%20GENERATION%20ANALYSIS.ipynb" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>A comprehensive analysis of Spain's energy mix from 2015 to 2018, examining the contributions, trends, and interplay of nuclear, fossil fuels, and renewable sources. 
-										This analysis provides valuable insights for policymakers and stakeholders, shedding light on Spain's energy generation and transition towards sustainability.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/abdulmalikajibadecodes/Energy-Data-Analysis/blob/main/SPAIN%20ENERGY%20GENERATION%20ANALYSIS.ipynb" class="button">See Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>										
-										<h2><a href="https://github.com/abdulmalikajibadecodes/Energy-Demand-Forecasting/blob/main/">ENERGY DEMAND FORECASTING<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/abdulmalikajibadecodes/Energy-Demand-Forecasting/blob/main/Energy%20Demand%20Forecasting%20Project.ipynb" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p> Implemented ARIMA and XGBoost models to tackle the critical task of energy demand forecasting. By harnessing these techniques,
-										 I delivered accurate and actionable predictions, empowering stakeholders to make informed decisions in energy planning and resource allocation.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/abdulmalikajibadecodes/Energy-Demand-Forecasting/blob/main/Energy%20Demand%20Forecasting%20Project.ipynb" class="button">See Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>										
-										<h2><a href="https://github.com/abdulmalikajibadecodes/Petroleum-Data-Analytics/blob/main/Decline%20Curve%20Analysis.ipynb">Decline Curve Analysis with Python<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/abdulmalikajibadecodes/Petroleum-Data-Analytics/blob/main/Decline%20Curve%20Analysis.ipynb" class="image fit"><img src="images/Decline.png" alt="" /></a>
-									<p> Employed Python and Scipy to perform decline curve analysis, applying advanced mathematical models to historical production data.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/abdulmalikajibadecodes/Petroleum-Data-Analytics/blob/main/Decline%20Curve%20Analysis.ipynb" class="button">See Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>										
-										<h2><a href="https://github.com/abdulmalikajibadecodes/Petroleum-Data-Analytics/blob/main/Well%20Test%20Analysis.ipynb">Well test analysis with Python<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/abdulmalikajibadecodes/Petroleum-Data-Analytics/blob/main/Well%20Test%20Analysis.ipynb" class="image fit"><img src="images/Well test.png" alt="" /></a>
-									<p> Utilized Python to analyze well test data and determine permeability, providing valuable insights into subsurface fluid flow. 
-										This work showcases my ability to apply computational tools to solve real-world problems in the field of reservoir engineering.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/abdulmalikajibadecodes/Petroleum-Data-Analytics/blob/main/Well%20Test%20Analysis.ipynb" class="button">See Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>										
-										<!-- <h2><a href="#">Document Summarizer Using NLP<br />										
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul> -->
-								</article>
-								<!-- <article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li> -->
-									</ul>
-								</article>
-							</section>
-						</div>
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-	</body>
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 4rem;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 20px rgba(37,99,235,0.2);
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(37,99,235,0.2);
+        }
+
+        .project-image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .project-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+            line-height: 1.8;
+            flex-grow: 1;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .project-link:hover {
+            background: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .publications-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(37,99,235,0.15);
+        }
+
+        .publication-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .publication-authors {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .publication-journal {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: auto;
+            transition: all 0.3s ease;
+        }
+
+        .publication-link:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .cv-section {
+            text-align: center;
+        }
+
+        .download-cv {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .download-cv:hover {
+            background: var(--secondary);
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid,
+            .publications-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+            <h1>Abdulmalik Ajibade's Portfolio</h1>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#cv">CV</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <img src="C:\Users\USER\Desktop\Portfolio\abdulmalikajibadecodes.github.io\images\headshot.jpg" alt="Profile Image" class="profile-image">
+                    <div class="hero-text">
+                        <h1>Abdulmalik Ajibade</h1>
+                        <p>Energy Analyst and Data Scientist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image-container">
+                            <img src="new_portfolio\images\predictive_maintenance.png" alt="Predictive Maintenance Project" class="project-image">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Intelligent Predictive Maintenance: Cost-Aware Classification of Critical Equipment Failures</h3>
+                            <p class="project-description">
+                                In this project, I developed machine learning models for classifying equipment failure types to proactively identify specific 
+                                failure modes before breakdowns occur. 
+                                By implementing cost-sensitive learning techniques, the model prioritizes accuracy in high-cost failure predictions, 
+                                effectively reducing downtime and maintenance expenses. This approach allows for early intervention on critical failures, 
+                                enhancing overall equipment reliability and operational efficiency.
+                            </p>
+                            <a href="https://colab.research.google.com/drive/1Dbzu3M04lPfhkekvwjSPFlmllKiTEb_F?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">
+                                See Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image-container">
+                            <img src="new_portfolio\images\spain1.png" alt="Project 2" class="project-image">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Energy Mix Analysis: Data-Driven Insights for Sustainable Energy Strategies</h3>
+                            <p class="project-description">
+                                In this project, I analyzed Spain’s energy generation data (2015–2018) to identify key trends, challenges, and opportunities 
+                                in the country’s energy transition. Through data-driven insights on nuclear, fossil fuels, and renewables, I uncovered patterns 
+                                in seasonal usage, demand gaps, and the interplay between conventional and renewable sources.The findings provide actionable intelligence 
+                                for optimizing energy strategies and driving sustainable, data-driven decision-making in the energy sector..
+                            </p>
+                            <a href="https://github.com/abdulmalikajibadecodes/Energy-Data-Analysis/blob/main/SPAIN%20ENERGY%20GENERATION%20ANALYSIS.ipynb" class="project-link" target="_blank" rel="noopener noreferrer">
+                                See Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image-container">
+                            <img src="new_portfolio\images\crm.png" alt="Project 3" class="project-image">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Well Production Optimization: Hybrid CRM-ML Framework for Enhanced Reservoir Management</h3>
+                            <p class="project-description">
+                            
+                            <p>This project demonstrates the innovative combination of traditional Capacitance-Resistance Models (CRM) 
+                                with modern machine learning techniques to optimize oil well production rates. By developing a hybrid approach
+                                that leverages both physics-based modeling and advanced analytics, I achieved significant improvements in production forecasting accuracy, 
+                                reducing prediction errors by up to 73% in challenging wells..
+                            </p>
+                            <a href="Well Production Optimization: Hybrid CRM-ML Framework for Enhanced Reservoir Management" class="project-link" target="_blank" rel="noopener noreferrer">
+                                See Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image-container">
+                            <img src="new_portfolio\images\lstm.png" alt="Project 4" class="project-image">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Oil Production Forecasting For Prodcution Optimization with Pressure and Flow Variables</h3>
+                            <p class="project-description">
+                                Engineered a comprehensive machine learning solution for oil production forecasting, leveraging multiple advanced models including LSTM networks and XGBoost. Developed and deployed a web application for real-time predictions, achieving 80% improvement over traditional forecasting methods.
+                            </p>
+                            <a href="Well Production Optimization: Hybrid CRM-ML Framework for Enhanced Reservoir Management" class="project-link" target="_blank" rel="noopener noreferrer">
+                                See Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="publications">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Recent Publications</h2>
+                <div class="publications-list">
+                    <div class="publication-item" data-aos="fade-up">
+                        <h3 class="publication-title">An Automated Machine Learning and Analytics Framework for Data-Driven Optimization of Multi-Source Regional Energy Systems</h3>
+                        <p class="publication-authors">A.A.Ajibade; M.I.Okai; P.E.Okon; O.G.Golagha</p>
+                        <p class="publication-journal">OnePetro (2024)</p>
+                        <a href="https://onepetro.org/SPENAIC/proceedings-abstract/24NAIC/24NAIC/D032S029R003/547756" target="_blank" rel="noopener noreferrer">
+                            Read Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+    
+                    <div class="publication-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="publication-title">Predictive Modeling of Daily Oil Production Volume Using Pressure-Dependent Parameters: A Machine Learning Approach and Web App Implementation</h3>
+                        <p class="publication-authors">A.A.Ajibade; I.SOkafor; O.Ogolo; O.G.Golagha</p>
+                        <p class="publication-journal">OnePetro (2024)</p>
+                        <a href="https://onepetro.org/SPENAIC/proceedings-abstract/24NAIC/24NAIC/D021S009R001/547812" target="_blank" rel="noopener noreferrer">
+                            Read Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+    
+                    <div class="publication-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="publication-title">Application of Pressure Transient Analysis to Gas Material Balance for Multi Rate Production</h3>
+                        <p class="publication-authors">I.S.Okafor; A.A.Ajibade; K.Jakada; T.J.Chior; A.B.Gimba; P.C.Nzerem</p>
+                        <p class="publication-journal">OnePetro (2024)</p>
+                        <a href="https://onepetro.org/SPENAIC/proceedings-abstract/24NAIC/24NAIC/D021S012R002/547881" target="_blank" rel="noopener noreferrer">
+                            Read Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+    
+                    <div class="publication-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="publication-title">Sustainable Gas Utilization: Integrating Natural Gas into the Circular Economy for Environmental Stewardship</h3>
+                        <p class="publication-authors">O.G.Golagha; O.Ogolo; B.O.Idogun; Q.Z.Bello; A.A.Ajibade</p>
+                        <p class="publication-journal">OnePetro (2024)</p>
+                        <a href="https://onepetro.org/SPENAIC/proceedings-abstract/24NAIC/24NAIC/D022S026R001/547795" target="_blank" rel="noopener noreferrer">
+                            Read Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="cv-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Curriculum Vitae</h2>
+                <a href="#" class="download-cv" data-aos="fade-up">Download CV</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
 </html>
-				
