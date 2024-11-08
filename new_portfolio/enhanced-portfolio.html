@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulmalik Ajibade's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --accent: #3b82f6;
+        }
+
+        /* [Previous CSS styles remain the same until the projects section] */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(37,99,235,0.2);
+        }
+
+        .project-image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .project-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+            line-height: 1.8;
+            flex-grow: 1;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .project-link:hover {
+            background: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .publications-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(37,99,235,0.15);
+        }
+
+        .publication-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .publication-authors {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .publication-journal {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: auto;
+            transition: all 0.3s ease;
+        }
+
+        .publication-link:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid,
+            .publications-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* [Rest of your existing CSS remains the same] */
+    </style>
+</head>
+<body>
+    <!-- [Header and Hero sections remain the same] -->
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/800/450" alt="Predictive Maintenance Project" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Intelligent Predictive Maintenance</h3>
+                        <p class="project-description">
+                            Cost-aware classification of critical equipment failures through predictive modeling. 
+                            Implemented cost-sensitive learning techniques to prioritize high-cost failure predictions, 
+                            reducing downtime and maintenance expenses while enhancing equipment reliability.
+                        </p>
+                        <a href="#" class="project-link">
+                            See Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/800/450" alt="Project 2" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project 2</h3>
+                        <p class="project-description">
+                            Detailed description of your second project goes here. Highlight the key achievements,
+                            technologies used, and impact created through this work.
+                        </p>
+                        <a href="#" class="project-link">
+                            See Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/800/450" alt="Project 3" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project 3</h3>
+                        <p class="project-description">
+                            Detailed description of your third project goes here. Explain the problem solved,
+                            your approach, and the final outcomes achieved.
+                        </p>
+                        <a href="#" class="project-link">
+                            See Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/800/450" alt="Project 4" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project 4</h3>
+                        <p class="project-description">
+                            Detailed description of your fourth project goes here. Share the challenges faced,
+                            solutions implemented, and the value delivered.
+                        </p>
+                        <a href="#" class="project-link">
+                            See Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Publications</h2>
+            <div class="publications-list">
+                <div class="publication-item" data-aos="fade-up">
+                    <h3 class="publication-title">Publication Title 1</h3>
+                    <p class="publication-authors">Author 1, Author 2, Author 3</p>
+                    <p class="publication-journal">Journal of Example Studies (2024)</p>
+                    <a href="#" class="publication-link">
+                        Read Paper <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="publication-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="publication-title">Publication Title 2</h3>
+                    <p class="publication-authors">Author 1, Author 2, Author 3</p>
+                    <p class="publication-journal">International Journal of Research (2023)</p>
+                    <a href="#" class="publication-link">
+                        Read Paper <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="publication-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="publication-title">Publication Title 3</h3>
+                    <p class="publication-authors">Author 1, Author 2, Author 3</p>
+                    <p class="publication-journal">Science & Technology Review (2023)</p>
+                    <a href="#" class="publication-link">
+                        Read Paper <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="publication-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="publication-title">Publication Title 4</h3>
+                    <p class="publication-authors">Author 1, Author 2, Author 3</p>
+                    <p class="publication-journal">Applied Research Quarterly (2022)</p>
+                    <a href="#" class="publication-link">
+                        Read Paper <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [CV section and scripts remain the same] -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+    </script>
+</body>
+</html>
